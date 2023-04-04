@@ -1,0 +1,148 @@
+
+/*Google font*/
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zilla Slab', serif;
+}
+
+header {
+    padding: 10% 0 0 2%;
+}
+
+h1, p {
+    text-align: center;
+    color: #ff3333;
+}
+
+h1 {
+    font-size: 5rem;
+    padding-bottom: 2%;
+}
+
+body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.pianoArea {
+    margin-top: 5%;
+    padding: 0 5% 10% 5%;
+    border-radius: 5%;
+    background: rgba(188, 188, 188, 0.2);
+}
+
+.teclasDePiano {
+    display: flex;
+    margin-top: 10%;
+}
+
+.teclasDePiano .key {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.teclasDePiano .black {
+    z-index: 2;
+    width: 44px;
+    height: 140px;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    /* background: rgb(63,94,251); */
+    background: linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(0,58,126,1) 100%);
+}
+
+.teclasDePiano .black.active {
+    box-shadow: inset -5px -10px 10px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(0deg, rgba(0,58,126,1) 100%, rgba(238,174,202,1) 0%);
+}
+
+.teclasDePiano .white {
+    width: 70px;
+    height: 230px;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid lightgray;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,203,214,1) 100%); 
+}
+
+.teclasDePiano .white.active {
+    box-shadow: inset -5px -10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(0deg, rgba(255,203,214,1) 100%, rgba(255,255,255,1) 0%);
+}
+
+
+@media screen and (max-width: 815px) {
+    .pianoArea {
+        padding: 25px;
+    }
+
+    .teclasDePiano {
+        margin-top: 10%;
+    }
+
+    .teclasDePiano .key:where(:nth-child(9), :nth-child(10)) {
+        display: none;
+    }
+
+    .teclasDePiano .black {
+        width: 40px;
+        height: 100px;
+        margin: 0 -20px 0 -20px;
+    }
+
+    .teclasDePiano .white {
+        width: 60px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .teclasDePiano .key:nth-child(13),
+    .teclasDePiano .key:nth-child(14),
+    .teclasDePiano .key:nth-child(15),
+    .teclasDePiano .key:nth-child(16),
+    .teclasDePiano .key:nth-child(17) {
+        display: none;
+    }
+
+    .teclasDePiano .white {
+        width: 50px;
+    }
+}
+
+/*
+.piano {
+display: flex;
+}
+
+.blanco {
+    position: relative;
+    width: 100px;
+    height: 400px;
+    margin-left: 3px;
+    background-color: #e6e6e6;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.9) , 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.blanco:active {
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.9),
+    2px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.negro:active {
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.9),
+    2px 1px 0px rgba(0, 0, 0, 0.1);
+}*/
+
+
