@@ -35,7 +35,7 @@ const playTune = (key) => {
     clickedKey.classList.add("active");
     setTimeout(() => {
         clickedKey.classList.remove("active");
-    }, 250);
+    }, 100);
 }
 
 pianoKeys.forEach (key => {
